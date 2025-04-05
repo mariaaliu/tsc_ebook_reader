@@ -9,6 +9,19 @@ Dispozitivul este proiectat să fie eficient energetic și ușor de utilizat, av
 
 ---
 
+#### Specificații
+
+- **MCU**: ESP32-C6 (Wi-Fi 6, BLE, RISC-V)
+- **Ecran**: 7.8" E-paper
+- **Stocare**: Slot microSD
+- **Conectivitate**: Qwiic, USB-C
+- **Senzori**: BME680 (temperatură, umiditate, gaz, presiune)
+- **Alimentare**: Baterie Li-Po 3.7V, încărcare prin USB-C
+- **RTC**: extern pentru consum redus în deep sleep
+- **Control**: 3 butoane + LED
+
+---
+
 ## Diagramă Bloc
 
 ```mermaid
@@ -351,3 +364,52 @@ graph TD;
 #### IO18 – Battery Monitor
 - **Utilizat de:** Măsurare baterie (ADC)
 - **Motiv:** ESP32-C6 permite conversie ADC pe acest pin, ideal pentru a detecta nivelul bateriei.
+
+
+---
+
+## Estimare Consum
+
+| Modul                     | Consum (mediu) | Activ/Idle                |
+|--------------------------|----------------|---------------------------|
+| ESP32-C6                 | ~80 mA         | 130 mA / 12 µA (deep sleep) |
+| E-paper 7.8”             | ~26 mA la refresh | 0 mA idle             |
+| BME680                   | ~2.1 mA        | 0.15 mA standby            |
+| microSD card (active)    | ~30-100 mA     | 0.1 mA sleep               |
+| RTC + supercap           | ~1 µA          |                           |
+| LED                      | max ~10 mA     | doar la activare          |
+| **Total estimat**        | ~100-150 mA (medie activă) | ~15 µA (deep sleep) |
+
+Cu o baterie de 1200 mAh, durata estimată:
+- **Utilizare activă (ocazional refresh)**: 8–10h
+- **Deep sleep majoritar**: până la 300 zile standby
+
+---
+
+## Vederi ale Prototipului
+
+### Ecran e-paper 7.8” integrat în carcasă
+![Ecran e-paper](Images/screen.png)
+
+### PCB – Top View
+![Top PCB](Images/Top_board.png)
+
+### PCB – Bottom View
+![Bottom PCB](Images/bottom_board.png)
+
+### Asamblare completă
+![Dispozitiv complet – vedere](Images/device.png)
+
+### Spate carcasă + porturi
+![Spate carcasă](Images/device_2.png)
+
+### Întreg ansamblu în carcasă – vedere explodată
+![Explodat + carcasă](Images/OpenBook%20Enclosure%20vM%20v2.png)
+
+### Vedere isometrică – 2/3
+![2/3 View](Images/2_thirds_view_board.png)
+
+### Vedere isometrică – 2/3 (flipped)
+![2/3 View Flipped](Images/2_thirds_view_board_flipped.png)
+
+---
