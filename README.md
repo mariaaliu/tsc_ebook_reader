@@ -9,6 +9,17 @@ Dispozitivul este proiectat să fie eficient energetic și ușor de utilizat, av
 
 ---
 
+## Cuprins
+- [Specificații](#specificații)
+- [Diagramă Bloc](#diagramă-bloc)
+- [BOM (Bill Of Materials)](#bom-bill-of-materials)
+- [Descrierea hardware – Conexiuni și Funcționalitate](#descrierea-hardware--conexiuni-și-funcționalitate)
+- [Pinout ESP32-C6](#pinout-esp32-c6)
+- [Estimare Consum](#estimare-consum)
+- [Vederi ale Prototipului](#vederi-ale-prototipului)
+
+---
+
 #### Specificații
 
 - **MCU**: ESP32-C6 (Wi-Fi 6, BLE, RISC-V)
