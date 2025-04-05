@@ -351,4 +351,3 @@ graph TD;
 #### IO18 – Battery Monitor
 - **Utilizat de:** Măsurare baterie (ADC)
 - **Motiv:** ESP32-C6 permite conversie ADC pe acest pin, ideal pentru a detecta nivelul bateriei.
-# tsc_ebook_reader
