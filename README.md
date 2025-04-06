@@ -11,6 +11,7 @@ Dispozitivul este proiectat să fie eficient energetic și ușor de utilizat, av
 
 ## Cuprins
 - [Specificații](#specificații)
+- [Pași de implementare](#pași-de-implementare)
 - [Diagramă Bloc](#diagramă-bloc)
 - [BOM (Bill Of Materials)](#bom-bill-of-materials)
 - [Descrierea hardware – Conexiuni și Funcționalitate](#descrierea-hardware--conexiuni-și-funcționalitate)
@@ -31,6 +32,15 @@ Dispozitivul este proiectat să fie eficient energetic și ușor de utilizat, av
 - **RTC**: extern pentru consum redus în deep sleep
 - **Control**: 3 butoane + LED
 
+---
+#### Pași de implementare:
+
+- realizarea schemei electrice
+- poziționarea pieselor pe PCB 2D
+- realizarea modelului 3D
+- simularea încadrării pieselor în carcasa finală
+- prezentarea produsului final simulat
+  
 ---
 
 ## Diagramă Bloc
