@@ -9,6 +9,8 @@ Dispozitivul este proiectat să fie eficient energetic și ușor de utilizat, av
 
 ---
 
+<br><br>
+
 ## Cuprins
 - [Specificații](#specificații)
 - [Pași de implementare](#pași-de-implementare)
